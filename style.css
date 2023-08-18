@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --header-height: 2rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+}
+
+li,
+p {
+  margin-bottom: 1rem;
+}
+
+aside {
+  background: lightblue;
+  position: sticky;
+  overflow-y: auto;
+  /* with fixed header */
+  /* top: var(--header-height);
+  height: calc(100vh - var(--header-height)); */
+  /* end of with fixed header */
+
+  /* without fixed header */
+  top: 0;
+  height: 100vh;
+  /* end of without fixed header */
+}
+
+main {
+  background: lightpink;
+}
+header {
+  background: lightgreen;
+  height: var(--header-height);
+  /* with fixed header */
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; */
+  /* end of with fixed header */
+}
+
+/* with fixed header */
+/* .wrapper {
+  margin-top: var(--header-height);
+} */
+/* end of with fixed header */
